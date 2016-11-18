@@ -1,56 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Vectorizer by volatilemajesty</title>
+    <meta name="description" content="Vectorizer : Raster to Vector Image Converter">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Vectorizer</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Vectorizer</h1>
-        <p class="header">Raster to Vector Image Converter</p>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/volatilemajesty/Vectorizer/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/volatilemajesty/Vectorizer/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/volatilemajesty/Vectorizer">View On GitHub</a></li>
-        </ul>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/volatilemajesty/Vectorizer">View on GitHub</a>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/volatilemajesty">volatilemajesty</a></p>
+          <h1 id="project_title">Vectorizer</h1>
+          <h2 id="project_tagline">Raster to Vector Image Converter</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/volatilemajesty/Vectorizer/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/volatilemajesty/Vectorizer/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-      </header>
-      <section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a id="vectorizer" class="anchor" href="#vectorizer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vectorizer</h1>
 
 <p>Raster to Vector image converter written in JS</p>
 
-<h3>
-<a id="simplest-usage" class="anchor" href="#simplest-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Simplest usage</h3>
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<h4>
+<a id="include-script" class="anchor" href="#include-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Include Script</h4>
+
+<pre><code>&lt;script src='app.js'&gt;&lt;/script&gt;
+</code></pre>
+
+<h4>
+<a id="initialize-an-object-and-call-makevector" class="anchor" href="#initialize-an-object-and-call-makevector" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Initialize an object and call makeVector</h4>
 
 <pre><code>var obj = new Vectorizer();
 makeVector(url, obj.SVGToContainer);
 
 </code></pre>
 
-<p>Appends the vectorized image to the root container (you can specify container to append to)
-The image URL <strong>must</strong> be in the same domain as the script. This is an SVG requirement in order to not to taint the canvas with foreign data</p>
+<p>Appends the vectorized image to the root container (you can specify container to append to).</p>
+
+<p><strong>Note:</strong> The image URL <strong>must</strong> be in the same domain as the script. This is an SVG requirement in order to not to taint the canvas with foreign data.</p>
+
+<h2>
+<a id="to-those-working-with-source" class="anchor" href="#to-those-working-with-source" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>To those working with source</h2>
+
+<p>Set <strong>colorquantcycles = 1</strong> for deterministic output. Any value &gt; 1 produces non-deterministic output. Default used is 3</p>
+
+<p>The <strong>numberofcolors</strong> option specifies palette color count. Cubic numbers ( 2^x) are suggested for deterministic palettes. Or, you can use a custom palette altogether</p>
+
+<p>It is highly recommend <strong>against</strong>  altering lower linear threshold and quadratic spline values. They seem to be at an empirically OK place as they are. Change them if you want to experiment. Do <strong>not</strong> set their value &gt; 2; inaccuracies are observed</p>
+
+<p>The <strong>mincolorratio</strong> option is a threshold below which anomaly and outlier pixel colors are randomized to a palette color. For an image of size 20 x 20 , a 0.01 threshold randomizes any color whose count is less than 20 x 20 x 0.01 = 4 pixels </p>
       </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Vectorizer maintained by <a href="https://github.com/volatilemajesty">volatilemajesty</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+
+    
+
   </body>
 </html>
