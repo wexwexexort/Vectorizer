@@ -20,7 +20,7 @@ Appends the vectorized image to the root container (you can specify container to
 
 Set **colorquantcycles = 1** for deterministic output. Any value > 1 produces non-deterministic output. Default used is 3
 
-The ** numberofcolors ** option specifies palette color count. Cubic numbers ( 2^x) are suggested for deterministic palettes. Or, you can use a custom palette altogether
+The **numberofcolors** option specifies palette color count. Cubic numbers ( 2^x) are suggested for deterministic palettes. Or, you can use a custom palette altogether
 
 It is highly recommend **against**  altering lower linear threshold and quadratic spline values. They seem to be at an empirically OK place as they are. Change them if you want to experiment. Do **not** set their value > 2; inaccuracies are observed
 
