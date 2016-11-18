@@ -42,17 +42,3 @@ obj.makeVector(url,alert)
 obj.makeVector(url, function(str){
    obj.SVGToContainer(str, 'Container-id-here');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
