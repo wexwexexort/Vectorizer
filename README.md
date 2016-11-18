@@ -16,15 +16,15 @@ Appends the vectorized image to the root container (you can specify container to
 
 **Note:** The image URL **must** be in the same domain as the script. This is an SVG requirement in order to not to taint the canvas with foreign data.
 
-## For those who want to mess with the source (and hopefully know what they're doing):
+## To those working with source
 
 Set **colorquantcycles = 1** for deterministic output. Any value > 1 produces non-deterministic output. Default used is 3
 
-** numberofcolors ** specifies palette color count. Cubic numbers ( 2^x) are suggested for deterministic palettes. Or, you can use a custom palette altogether
+The ** numberofcolors ** option specifies palette color count. Cubic numbers ( 2^x) are suggested for deterministic palettes. Or, you can use a custom palette altogether
 
 It is highly recommend **against**  altering lower linear threshold and quadratic spline values. They seem to be at an empirically OK place as they are. Change them if you want to experiment. Do **not** set their value > 2; inaccuracies are observed
 
-**mincolorratio** is a threshold below which anomaly and outlier pixel colors are randomized to a palette color. For an image of size 20 x 20 , a 0.01 threshold randomizes any color whose count is less than 20 x 20 x 0.01 = 4 pixels 
+The **mincolorratio** option is a threshold below which anomaly and outlier pixel colors are randomized to a palette color. For an image of size 20 x 20 , a 0.01 threshold randomizes any color whose count is less than 20 x 20 x 0.01 = 4 pixels 
 
 
 
