@@ -1,10 +1,11 @@
 # Vectorizer
 Raster to Vector image converter written in JS
-##Simplest usage 
-### Include Script
+##Usage 
+#### Include Script
 ```
 <script src='app.js'></script>
 ```
+#### Initialize an object and call makeVector 
 
 ```
 var obj = new Vectorizer();
