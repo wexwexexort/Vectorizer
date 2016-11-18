@@ -268,7 +268,8 @@ function Vectorizer() {
           // This pixel's indexed color
           val = ii.array[j][i];
 
-          // neighbor pixel 
+          // neighbor pixel color check
+          // better ways to implement this
           if ((j > 0) && (i > 0)) {
             n1 = ii.array[j - 1][i - 1] === val ? 1 : 0;
           } else {
