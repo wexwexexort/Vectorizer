@@ -1,6 +1,0 @@
-{
-  "name": "Vectorizer",
-  "tagline": "Raster to Vector Image Converter",
-  "body": "# Vectorizer\r\nRaster to Vector image converter written in JS\r\n\r\n###Simplest usage \r\n```\r\nvar obj = new Vectorizer();\r\nmakeVector(url, obj.SVGToContainer);\r\n\r\n```\r\nAppends the vectorized image to the root container (you can specify container to append to)\r\nThe image URL **must** be in the same domain as the script. This is an SVG requirement in order to not to taint the canvas with foreign data\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
