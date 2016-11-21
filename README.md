@@ -16,7 +16,7 @@ Appends the vectorized image to the root container (you can specify container to
 
 **Note:** The image URL **must** be in the same domain as the script. This is an SVG requirement in order to not to taint the canvas with foreign data.
 
-## To those working with source
+## Options
 
 Set **colorquantcycles = 1** for deterministic output. Any value > 1 produces non-deterministic output. Default used is 3
 
