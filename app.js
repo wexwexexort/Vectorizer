@@ -270,11 +270,10 @@ function Vectorizer() {
 
           // neighbor pixel color check
           // better ways to implement this
+					n1 = 0 ;
           if ((j > 0) && (i > 0)) {
             n1 = ii.array[j - 1][i - 1] === val ? 1 : 0;
-          } else {
-            n1 = 0;
-          }
+
           if (j > 0) {
             n2 = ii.array[j - 1][i] === val ? 1 : 0;
           } else {
